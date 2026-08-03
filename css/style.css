@@ -242,20 +242,17 @@ nav a:hover{
    PROGRAMS
 ========================= */
 
-.programs{   
-    
-    padding:40px 0;
+.programs{
+    padding: 20px 0 80px;
 }
 
 .section-title{
 
     text-align:center;
-
     font-size:42px;
-
     color:#123D9A;
-
-    margin-bottom:20px;
+     margin-top: 0;
+    margin-bottom: 25px;
 
 }
 
@@ -532,7 +529,7 @@ PROGRAMS PAGE
 
     background:#F3F8FF;
     text-align:center;
-    padding:50px 0 30px;
+    padding:50px 0 20px;
 
 }
 
@@ -556,31 +553,25 @@ PROGRAMS PAGE
 }
 
 .program-details{
-
-    padding:30px 0 10px;
-
+     padding: 20px 0 0;
 }
 
 .program-row{
-
-    display:flex;
-    align-items:center;
-    gap:60px;
-
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    margin-top: -40px;   /* moves section upward */
 }
 
 .program-image{
-
-    flex:1;
-
+    flex:1.2;
 }
 
 .program-image img{
-
     width:100%;
-    max-width:500px;
+    max-width:700px;
     border-radius:20px;
-
+    display:block;
 }
 
 .program-content{
@@ -741,108 +732,80 @@ CALL TO ACTION
 
 }
 
-/*========================================
-  ABOUT PAGE
-========================================*/
+/* ==========================
+   ABOUT PAGE
+========================== */
 
-.about-mission{
-
-    background:#ffffff;
+.program-row{
+    display:flex;
+    align-items:center;
+    gap:60px;
     padding:70px 0;
-    text-align:center;
-
 }
 
-.about-mission h2{
-
-    color:#123D9A;
-    font-size:42px;
-    margin-bottom:20px;
-
+.program-image{
+    flex:1;
 }
 
-.about-mission p{
-
-    max-width:800px;
-    margin:0 auto;
-    font-size:20px;
-    color:#555;
-    line-height:1.8;
-
-}
-
-/* Meet the Instructor */
-
-.about-image img{
-
+.program-image img{
     width:100%;
-    max-width:450px;
+    max-width:520px;
     border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-
+    display:block;
+    margin:auto;
 }
 
-/* Values Section */
-
-.values-grid{
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:40px;
-
+.about-content{
+    flex:1;
 }
 
-.value-card{
-
-    background:#ffffff;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-
-}
-
-.value-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.value-card h3{
-
-    color:#123D9A;
+.about-content h2{
+    font-size:46px;
+    color:#173f9d;
     margin-bottom:15px;
-    font-size:24px;
-
 }
 
-.value-card p{
+.about-content h3{
+    font-size:28px;
+    color:#333;
+    margin-bottom:25px;
+}
 
-    color:#666;
-    line-height:1.7;
+.about-content p{
+    font-size:19px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:20px;
+}
 
+.about-list{
+    list-style:none;
+    padding:0;
+    margin-top:30px;
+}
+
+.about-list li{
+    font-size:19px;
+    margin-bottom:16px;
+    color:#333;
 }
 
 /* Mobile */
+@media(max-width:900px){
 
-@media (max-width:768px){
-
-    .values-grid{
-
-        grid-template-columns:1fr;
-
+    .program-row{
+        flex-direction:column;
+        text-align:center;
     }
 
-}
+    .program-image img{
+        max-width:400px;
+    }
 
-.designation{
-
-    color:#2EAD3A;
-    font-size:20px;
-    font-weight:600;
-    margin-bottom:25px;
-
+    .about-list{
+        text-align:left;
+        display:inline-block;
+    }
 }
 
 /*========================================
@@ -999,4 +962,76 @@ CALL TO ACTION
     width:100%;
     margin-top:10px;
 
+}
+.sat-demo{
+    text-align:center;
+    margin:30px 0 40px;
+}
+
+.sat-demo-btn{
+    display:inline-block;
+    background:#1f4aa8;
+    color:#fff;
+    text-decoration:none;
+    padding:16px 34px;
+    border-radius:50px;
+    font-size:20px;
+    font-weight:700;
+    transition:0.3s ease;
+    box-shadow:0 8px 20px rgba(31,74,168,.25);
+}
+
+.sat-demo-btn:hover{
+    background:#163a84;
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(31,74,168,.35);
+}
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.testimonials{
+    padding:80px 0;
+    background:#ffffff;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:45px;
+}
+
+.testimonial-card{
+    background:#f8fbff;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+}
+
+.stars{
+    font-size:28px;
+    color:#f4b400;
+    margin-bottom:20px;
+}
+
+.testimonial-card p{
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+    font-style:italic;
+    margin-bottom:25px;
+}
+
+.testimonial-card h4{
+    color:#1d4aa8;
+    font-size:18px;
+    font-weight:700;
 }
